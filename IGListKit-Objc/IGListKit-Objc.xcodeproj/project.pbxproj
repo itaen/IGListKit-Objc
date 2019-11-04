@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EC55EB7A84ADE4F1870F094 /* Pods_IGListKit_Objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C99B4707B9D53C8B45F1B7 /* Pods_IGListKit_Objc.framework */; };
 		B8371CD7236FCD1200FB1F03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8371CD6236FCD1200FB1F03 /* AppDelegate.m */; };
 		B8371CDA236FCD1200FB1F03 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8371CD9236FCD1200FB1F03 /* SceneDelegate.m */; };
 		B8371CDD236FCD1200FB1F03 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8371CDC236FCD1200FB1F03 /* MainViewController.m */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		351FC598451A64AA7E43BE81 /* Pods-IGListKit-Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKit-Objc.release.xcconfig"; path = "Target Support Files/Pods-IGListKit-Objc/Pods-IGListKit-Objc.release.xcconfig"; sourceTree = "<group>"; };
+		57FA2741A327ECE4B38BF8EB /* Pods-IGListKit-Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKit-Objc.debug.xcconfig"; path = "Target Support Files/Pods-IGListKit-Objc/Pods-IGListKit-Objc.debug.xcconfig"; sourceTree = "<group>"; };
+		95C99B4707B9D53C8B45F1B7 /* Pods_IGListKit_Objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKit_Objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8371CD2236FCD1200FB1F03 /* IGListKit-Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IGListKit-Objc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8371CD5236FCD1200FB1F03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B8371CD6236FCD1200FB1F03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EC55EB7A84ADE4F1870F094 /* Pods_IGListKit_Objc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		248A976A395A469F80C36C2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57FA2741A327ECE4B38BF8EB /* Pods-IGListKit-Objc.debug.xcconfig */,
+				351FC598451A64AA7E43BE81 /* Pods-IGListKit-Objc.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		357EF4977A87A2EC4F2201BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95C99B4707B9D53C8B45F1B7 /* Pods_IGListKit_Objc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B8371CC9236FCD1200FB1F03 = {
 			isa = PBXGroup;
 			children = (
 				B8371CD4236FCD1200FB1F03 /* IGListKit-Objc */,
 				B8371CD3236FCD1200FB1F03 /* Products */,
+				248A976A395A469F80C36C2F /* Pods */,
+				357EF4977A87A2EC4F2201BE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,9 +109,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8371CEB236FCD1400FB1F03 /* Build configuration list for PBXNativeTarget "IGListKit-Objc" */;
 			buildPhases = (
+				1F054631EBAD11AE4151EA30 /* [CP] Check Pods Manifest.lock */,
 				B8371CCE236FCD1200FB1F03 /* Sources */,
 				B8371CCF236FCD1200FB1F03 /* Frameworks */,
 				B8371CD0236FCD1200FB1F03 /* Resources */,
+				CACF7A40170E1D5672205D17 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +168,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F054631EBAD11AE4151EA30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IGListKit-Objc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CACF7A40170E1D5672205D17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IGListKit-Objc/Pods-IGListKit-Objc-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IGListKit-Objc/Pods-IGListKit-Objc-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IGListKit-Objc/Pods-IGListKit-Objc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B8371CCE236FCD1200FB1F03 /* Sources */ = {
@@ -289,11 +357,11 @@
 		};
 		B8371CEC236FCD1400FB1F03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57FA2741A327ECE4B38BF8EB /* Pods-IGListKit-Objc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "IGListKit-Objc/IGListKit-Objc.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6QRWM94KKM;
 				INFOPLIST_FILE = "IGListKit-Objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -303,18 +371,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IGListKit-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		B8371CED236FCD1400FB1F03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 351FC598451A64AA7E43BE81 /* Pods-IGListKit-Objc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "IGListKit-Objc/IGListKit-Objc.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 6QRWM94KKM;
 				INFOPLIST_FILE = "IGListKit-Objc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -324,7 +392,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.IGListKit-Objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
