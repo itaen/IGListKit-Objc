@@ -18,7 +18,9 @@
 
 - (void)leagcyWindowInit {
 	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-	[self.window setRootViewController:[MainViewController new]];
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[MainViewController new]];
+	nav.title = @"test";
+	[self.window setRootViewController:nav];
 	[self.window makeKeyAndVisible];
 }
 
