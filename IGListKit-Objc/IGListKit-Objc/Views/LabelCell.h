@@ -18,11 +18,26 @@
  */
 
 #import <UIKit/UIKit.h>
+#import <IGListBindable.h>
+#import "BindingItem.h"
 
-@interface LabelCell : UICollectionViewCell
+@class LabelCell;
+@protocol LabelCellDelegate <NSObject>
+
+- (void)didTapLabelCell:(LabelCell *)cell;
+
+@end
+
+@interface LabelCell : UICollectionViewCell<IGListBindable>
+
 @property (nonatomic,strong) UILabel *label;
+@property (nonatomic,weak) id <LabelCellDelegate> delegate;
 
 +(CGFloat)textHeight:(NSString *)text width:(CGFloat)width;
 
 +(CGFloat)singleLineHeight;
+
+
+
+
 @end

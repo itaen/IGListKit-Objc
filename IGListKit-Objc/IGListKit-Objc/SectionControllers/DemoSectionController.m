@@ -66,7 +66,6 @@
 //    if ([item isEqual:object]) {
 //        return NO;
 //    }
-    // TODO: guard let object = object as? DemoItem else { return false }
     return _controllerClass == [(DemoItem *)object controllerClass] && _controllerIdentifier == [(DemoItem *)object controllerIdentifier];
 }
 

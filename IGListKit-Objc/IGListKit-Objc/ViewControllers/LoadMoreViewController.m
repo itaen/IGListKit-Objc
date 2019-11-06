@@ -30,7 +30,7 @@
 //数据源数组
 @property (nonatomic,strong) NSMutableArray *items;
 @property (nonatomic,assign) BOOL loading;
-@property (nonatomic,strong) NSString *spinToken;
+@property (nonatomic,copy) NSString *spinToken;
 @end
 
 @implementation LoadMoreViewController
@@ -119,7 +119,7 @@
         
         //模拟网络加载
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            sleep(2);
+            sleep(0.5);
             
             //加载完成，添加数据
             dispatch_async(dispatch_get_main_queue(), ^{

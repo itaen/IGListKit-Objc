@@ -14,6 +14,9 @@
 		B8371CE2236FCD1400FB1F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8371CE1236FCD1400FB1F03 /* Assets.xcassets */; };
 		B8371CE5236FCD1400FB1F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8371CE3236FCD1400FB1F03 /* LaunchScreen.storyboard */; };
 		B8371CE8236FCD1400FB1F03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8371CE7236FCD1400FB1F03 /* main.m */; };
+		B84A9B3F237261780007CDA4 /* BindingSectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84A9B3E237261780007CDA4 /* BindingSectionViewController.m */; };
+		B84A9B42237261F10007CDA4 /* BindingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B84A9B41237261F10007CDA4 /* BindingViewController.m */; };
+		B84A9B452372629A0007CDA4 /* BindingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B84A9B442372629A0007CDA4 /* BindingItem.m */; };
 		B8F361212371542300AF08C1 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F360DE2371542300AF08C1 /* User.m */; };
 		B8F361222371542300AF08C1 /* SelectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F360DF2371542300AF08C1 /* SelectionModel.m */; };
 		B8F361232371542300AF08C1 /* FeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B8F360E02371542300AF08C1 /* FeedItem.m */; };
@@ -78,6 +81,12 @@
 		B8371CE6236FCD1400FB1F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8371CE7236FCD1400FB1F03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8371CEE236FCD1900FB1F03 /* IGListKit-Objc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "IGListKit-Objc.entitlements"; sourceTree = "<group>"; };
+		B84A9B3D237261780007CDA4 /* BindingSectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingSectionViewController.h; sourceTree = "<group>"; };
+		B84A9B3E237261780007CDA4 /* BindingSectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingSectionViewController.m; sourceTree = "<group>"; };
+		B84A9B40237261F10007CDA4 /* BindingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingViewController.h; sourceTree = "<group>"; };
+		B84A9B41237261F10007CDA4 /* BindingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingViewController.m; sourceTree = "<group>"; };
+		B84A9B432372629A0007CDA4 /* BindingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindingItem.h; sourceTree = "<group>"; };
+		B84A9B442372629A0007CDA4 /* BindingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindingItem.m; sourceTree = "<group>"; };
 		B8F360DD2371542300AF08C1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		B8F360DE2371542300AF08C1 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		B8F360DF2371542300AF08C1 /* SelectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionModel.m; sourceTree = "<group>"; };
@@ -218,16 +227,12 @@
 		B8371CD4236FCD1200FB1F03 /* IGListKit-Objc */ = {
 			isa = PBXGroup;
 			children = (
-				B8371CD5236FCD1200FB1F03 /* AppDelegate.h */,
-				B8371CD6236FCD1200FB1F03 /* AppDelegate.m */,
-				B8371CD8236FCD1200FB1F03 /* SceneDelegate.h */,
-				B8371CD9236FCD1200FB1F03 /* SceneDelegate.m */,
 				B8371CDB236FCD1200FB1F03 /* MainViewController.h */,
 				B8371CDC236FCD1200FB1F03 /* MainViewController.m */,
-				B8F36142237156A400AF08C1 /* Views */,
 				B8F360DC2371542300AF08C1 /* Models */,
 				B8F360E52371542300AF08C1 /* SectionControllers */,
 				B8F361042371542300AF08C1 /* ViewControllers */,
+				B8F36142237156A400AF08C1 /* Views */,
 				B8F361732371596200AF08C1 /* Support Files */,
 			);
 			path = "IGListKit-Objc";
@@ -236,6 +241,8 @@
 		B8F360DC2371542300AF08C1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B84A9B432372629A0007CDA4 /* BindingItem.h */,
+				B84A9B442372629A0007CDA4 /* BindingItem.m */,
 				B8F360E42371542300AF08C1 /* FeedItem.h */,
 				B8F360E02371542300AF08C1 /* FeedItem.m */,
 				B8F360DD2371542300AF08C1 /* Person.h */,
@@ -251,6 +258,8 @@
 		B8F360E52371542300AF08C1 /* SectionControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B84A9B3D237261780007CDA4 /* BindingSectionViewController.h */,
+				B84A9B3E237261780007CDA4 /* BindingSectionViewController.m */,
 				B8F360EF2371542300AF08C1 /* DemoSectionController.h */,
 				B8F360FB2371542300AF08C1 /* DemoSectionController.m */,
 				B8F360E72371542300AF08C1 /* DisplaySectionController.h */,
@@ -286,6 +295,8 @@
 		B8F361042371542300AF08C1 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B84A9B40237261F10007CDA4 /* BindingViewController.h */,
+				B84A9B41237261F10007CDA4 /* BindingViewController.m */,
 				B8F361182371542300AF08C1 /* DiffTableViewController.h */,
 				B8F3610B2371542300AF08C1 /* DiffTableViewController.m */,
 				B8F3611C2371542300AF08C1 /* DisplayViewController.h */,
@@ -351,6 +362,10 @@
 		B8F361732371596200AF08C1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				B8371CD5236FCD1200FB1F03 /* AppDelegate.h */,
+				B8371CD6236FCD1200FB1F03 /* AppDelegate.m */,
+				B8371CD8236FCD1200FB1F03 /* SceneDelegate.h */,
+				B8371CD9236FCD1200FB1F03 /* SceneDelegate.m */,
 				B8F361742371598300AF08C1 /* Default-568h@2x.png */,
 				B8371CEE236FCD1900FB1F03 /* IGListKit-Objc.entitlements */,
 				B8371CE1236FCD1400FB1F03 /* Assets.xcassets */,
@@ -479,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8F361222371542300AF08C1 /* SelectionModel.m in Sources */,
+				B84A9B452372629A0007CDA4 /* BindingItem.m in Sources */,
 				B8F3612B2371542300AF08C1 /* WorkingRangeSectionController.m in Sources */,
 				B8F3616A237156A400AF08C1 /* ManuallySelfSizingCell.m in Sources */,
 				B8F361292371542300AF08C1 /* UserSectionController.m in Sources */,
@@ -506,10 +522,12 @@
 				B8F361312371542300AF08C1 /* ExpandableSectionController.m in Sources */,
 				B8F36171237156A400AF08C1 /* FullWidthSelfSizingCell.m in Sources */,
 				B8F3612D2371542300AF08C1 /* DemoSectionController.m in Sources */,
+				B84A9B42237261F10007CDA4 /* BindingViewController.m in Sources */,
 				B8371CDD236FCD1200FB1F03 /* MainViewController.m in Sources */,
 				B8F361252371542300AF08C1 /* LabelSectionController.m in Sources */,
 				B8F361382371542300AF08C1 /* EmptyViewController.m in Sources */,
 				B8371CD7236FCD1200FB1F03 /* AppDelegate.m in Sources */,
+				B84A9B3F237261780007CDA4 /* BindingSectionViewController.m in Sources */,
 				B8F361232371542300AF08C1 /* FeedItem.m in Sources */,
 				B8F3613E2371542300AF08C1 /* WorkingRangeViewController.m in Sources */,
 				B8371CE8236FCD1400FB1F03 /* main.m in Sources */,

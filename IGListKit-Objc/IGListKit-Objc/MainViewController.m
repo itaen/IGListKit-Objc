@@ -21,7 +21,7 @@
 #import "NestedAdapterViewController.h"
 #import "DiffTableViewController.h"
 #import "SingleSectionViewController.h"
-
+#import "BindingViewController.h"
 
 @interface MainViewController ()<IGListAdapterDataSource>
 
@@ -85,7 +85,9 @@
 				  [[DemoItem alloc] init:@"补充视图" controllerClass:[SupplementaryViewController class] controllerIdentifier:nil],
 				  [[DemoItem alloc] init:@"自适应cells" controllerClass:[SelfSizingCellsViewController class] controllerIdentifier:nil],
 				  [[DemoItem alloc] init:@"滚动过程中cell的显示或隐藏delegate回调" controllerClass:[DisplayViewController class] controllerIdentifier:nil],
-				  [[DemoItem alloc] init:@"Stacked Section Controllers" controllerClass:[StackedViewController class] controllerIdentifier:nil],nil];
+				  [[DemoItem alloc] init:@"Stacked Section Controllers" controllerClass:[StackedViewController class] controllerIdentifier:nil],
+				  [[DemoItem alloc] init:@"动态绑定列表" controllerClass:[BindingViewController class] controllerIdentifier:nil],
+				  nil];
 	}
 	return _demos;
 }

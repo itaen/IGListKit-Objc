@@ -23,9 +23,16 @@
 @interface LabelCell ()
 @property (nonatomic,strong) CALayer *separator;
 @property (nonatomic,assign) CGFloat singleLineHeight;
+@property (nonatomic, strong) UIButton *changeButton;
 @end
 
 @implementation LabelCell
+
+- (void)bindViewModel:(id)viewModel {
+	BindingItem *item = (BindingItem *)viewModel;
+	self.label.text = [NSString stringWithFormat:@"%@%ld",item.text,item.count];
+	self.changeButton.hidden = NO;
+}
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -34,8 +41,27 @@
         [self.contentView addSubview:self.label];
         [self.contentView.layer addSublayer:self.separator];
         self.contentView.backgroundColor = [UIColor whiteColor];
+		[self.contentView addSubview:self.changeButton];
     }
     return self;
+}
+
+- (void)changeButtonPressed:(UIButton *)sender {
+	if (self.delegate) {
+		[self.delegate didTapLabelCell:self];
+	}
+}
+
+- (UIButton *)changeButton {
+	if (!_changeButton) {
+		_changeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+		[_changeButton setTitle:@"点击改变数据" forState:UIControlStateNormal];
+		[_changeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+		[_changeButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+		[_changeButton addTarget:self action:@selector(changeButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+		_changeButton.hidden = YES;
+	}
+	return _changeButton;
 }
 
 +(UIFont *)font{
@@ -84,11 +110,15 @@
     CGFloat height=0.5;
     CGFloat left=LabelCell.insets.left;
     _separator.frame=CGRectMake(left, bounds.size.height-height, bounds.size.width-left, height);
+	CGFloat buttonWidth = 100.f;
+	CGFloat buttonHeight = 55.f;
+	_changeButton.frame = CGRectMake(bounds.size.width - buttonWidth, (bounds.size.height - buttonHeight)/2.f,buttonWidth, buttonHeight);
 }
 
 -(void)setHighlighted:(BOOL)highlighted{
     [super setHighlighted:highlighted];
     self.contentView.backgroundColor=[UIColor colorWithWhite:highlighted ? 0.9 : 1 alpha:1];
 }
+
 
 @end
